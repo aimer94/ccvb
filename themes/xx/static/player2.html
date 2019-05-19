@@ -5,7 +5,7 @@
 	<!-- flowplayer depends on jQuery 1.7.1+ (for now) -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<!-- flowplayer.js -->
-   <script type="text/javascript" src="{{ .Site.BaseUrl }}js/flowplayer.min.js"></script>
+   <script type="text/javascript" src="{{.Site.BaseUrl}}js/flowplayer.min.js"></script>
    <script src="//cdn.flowplayer.com/releases/native/stable/plugins/hls.min.js"></script>
    <!-- player styling -->
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flowplayer/7.2.7/skin/skin.min.css">
@@ -23,7 +23,7 @@ flowplayer("#player", {
   clip: {
     sources: [
       { type: "video/mp4",
-        src: "{{ .Site.BaseUrl }}n.mp4"  }
+        src: "{{.Site.BaseUrl}}n.mp4"  }
     ],
   }
 });
