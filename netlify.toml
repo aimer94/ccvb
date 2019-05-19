@@ -1,0 +1,2 @@
+headers = [
+  {for = "/*", values = {X-Custom-Header = "Access-Control-Allow-Credentials: true"}}]
