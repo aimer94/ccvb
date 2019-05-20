@@ -3,11 +3,23 @@
 {{- partial "head.html" . -}}
 <body>
 <section class="video-player">
-<div id="8" class="flowplayer fp-slim"></div>
 <div id="9" class="flowplayer fp-slim"></div>
-<div id="10" class="flowplayer fp-slim"></div>
-<div id="11" class="flowplayer fp-slim"></div>
-<div id="12" class="flowplayer fp-slim"></div>
+<script type="text/javascript">
+flowplayer.conf.hlsjs = {
+    maxBufferSize: 0,
+    maxBufferLength: 0,
+    liveSyncDuration: 0
+  };
+flowplayer("#9", {
+  aspectRatio: "11:6",
+  clip: {
+    sources: [
+      { type: "video/mp4",
+        src: "https://drive.google.com/uc?export=download&id=1hKNQclH7h8fJSNQ__vtnnQKaJmTj1Lbo"  }
+    ],
+  }
+});
+</script>
 
 </section>
 {{- partial "footer" . -}}
