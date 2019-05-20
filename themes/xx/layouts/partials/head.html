@@ -8,4 +8,23 @@
    <script src="//cdn.flowplayer.com/releases/native/stable/plugins/hls.min.js"></script>
    <!-- player styling -->
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flowplayer/7.2.7/skin/skin.min.css">
+<style>
+/* setting background enforces poster setup */
+.flowplayer {
+  background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQzMo3_z9GR5qqhl9D656h62IrQpiIu1ohxNptfuJf4TpVV0EEk);
+  margin-bottom: 30px;
+}
+@media(-webkit-min-device-pixel-ratio: 2) {
+  .flowplayer {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQzMo3_z9GR5qqhl9D656h62IrQpiIu1ohxNptfuJf4TpVV0EEk);
+  }
+}
+ 
+/* show all controls, except fullscreen, in poster state */
+.is-poster.flowplayer .fp-controls,
+.is-poster.flowplayer .fp-time,
+.is-poster.flowplayer .fp-embed {
+  display: block !important;
+}
+</style>
 </head>
