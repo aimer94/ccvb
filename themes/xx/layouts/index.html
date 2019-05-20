@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 {{- partial "head.html" . -}}
+{{- partial "player2" . -}}
 <body>
+<div id="player" class="flowplayer fp-slim"></div>
 <div id="moen" class="flowplayer fp-slim"></div>
-<div id="dua" class="flowplayer fp-slim"></div>
-<!-- konten -->
-   <script type="text/javascript">
-flowplayer.conf.hlsjs = {
-    maxBufferSize: 0,
-    maxBufferLength: 30,
-    liveSyncDuration: 30
-  };
-flowplayer("#moen", {
-  aspectRatio: "11:6",
-  clip: {
-    sources: [
-      { type: "video/mp4",
-        src: "{{.Site.BaseURL}}n.mp4"  }
-    ],
-flowplayer("#dua", {
-  aspectRatio: "11:6",
-  clip: {
-    sources: [
-      { type: "video/mp4",
-        src: "{{.Site.BaseURL}}n.mp4"  }
-    ],
-  }
+<script>$(document).ready(function(){
+$('.series').each(function(){
+var $this=$(this);
+var id=$this.attr('rel');
+$this.qtip({
+content:{
+text: '<img class="" src="//i0.wp.com/animeku.tv/wp-content/themes/animeku/images/loader.gif" alt="Loading..." />',
+ajax:{
+url: 'https://animeku.tv/wp-content/themes/animeku/tooltip.php',
+type: 'POST',
+loading: false,
+data: 'id=' + id
+}},
+show: 'mouseover',
+hide: {
+delay: 200,
+fixed: true
+},
+position: {
+target: 'mouse',
+viewport: $(window)
+}});
 });
-</script>
+});</script>
 </body>
 </html>

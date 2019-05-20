@@ -1,9 +1,24 @@
-<div id="player" class="flowplayer fp-slim"></div>
 <script type="text/javascript">
 flowplayer.conf.hlsjs = {
     maxBufferSize: 0,
-    maxBufferLength: 30,
-    liveSyncDuration: 30
+    maxBufferLength: 0,
+    liveSyncDuration: 0
+  };
+flowplayer("#moen", {
+  aspectRatio: "11:6",
+  clip: {
+    sources: [
+      { type: "video/mp4",
+        src: "{{.Site.BaseURL}}n.mp4"  }
+    ],
+  }
+});
+</script>
+<script type="text/javascript">
+flowplayer.conf.hlsjs = {
+    maxBufferSize: 0,
+    maxBufferLength: 0,
+    liveSyncDuration: 0
   };
 flowplayer("#player", {
   aspectRatio: "11:6",
