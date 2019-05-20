@@ -1,11 +1,6 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript">
-$(function () {
-    $("#ic").load("{{.Site.BaseURL}}player");
-    $("#ic2").load("{{.Site.BaseURL}}player2")
-})
 <!-- flowplayer depends on jQuery 1.7.1+ (for now) -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<!-- flowplayer.js -->
@@ -13,5 +8,28 @@ $(function () {
    <script src="//cdn.flowplayer.com/releases/native/stable/plugins/hls.min.js"></script>
    <!-- player styling -->
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flowplayer/7.2.7/skin/skin.min.css">
+   <!-- konten -->
+   <script type="text/javascript">
+flowplayer.conf.hlsjs = {
+    maxBufferSize: 0,
+    maxBufferLength: 30,
+    liveSyncDuration: 30
+  };
+flowplayer("#moen", {
+  aspectRatio: "11:6",
+  clip: {
+    sources: [
+      { type: "video/mp4",
+        src: "{{.Site.BaseURL}}n.mp4"  }
+    ],
+flowplayer("#dua", {
+  aspectRatio: "11:6",
+  clip: {
+    sources: [
+      { type: "video/mp4",
+        src: "{{.Site.BaseURL}}n.mp4"  }
+    ],
+  }
+});
 </script>
 </head>
