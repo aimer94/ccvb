@@ -8,28 +8,4 @@
    <script src="//cdn.flowplayer.com/releases/native/stable/plugins/hls.min.js"></script>
    <!-- player styling -->
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flowplayer/7.2.7/skin/skin.min.css">
-   <!-- konten -->
-   <script type="text/javascript">
-flowplayer.conf.hlsjs = {
-    maxBufferSize: 0,
-    maxBufferLength: 30,
-    liveSyncDuration: 30
-  };
-flowplayer("#moen", {
-  aspectRatio: "11:6",
-  clip: {
-    sources: [
-      { type: "video/mp4",
-        src: "{{.Site.BaseURL}}n.mp4"  }
-    ],
-flowplayer("#dua", {
-  aspectRatio: "11:6",
-  clip: {
-    sources: [
-      { type: "video/mp4",
-        src: "{{.Site.BaseURL}}n.mp4"  }
-    ],
-  }
-});
-</script>
 </head>
